@@ -598,7 +598,7 @@ DEDUPE_ALGO_HASH_CODE = 'hash_code'
 DEDUPE_ALGO_UNIQUE_ID_FROM_TOOL_OR_HASH_CODE = 'unique_id_from_tool_or_hash_code'
 
 # Choice of deduplication algorithm per parser
-# Key = the scan_type from factory.py (= the test_type)
+# Key = the scan_type from dojo.tools.SCANNERS (= the test_type)
 # Default is DEDUPE_ALGO_LEGACY
 DEDUPLICATION_ALGORITHM_PER_PARSER = {
     'Checkmarx Scan detailed': DEDUPE_ALGO_UNIQUE_ID_FROM_TOOL,

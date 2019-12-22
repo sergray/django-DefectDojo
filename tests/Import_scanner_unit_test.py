@@ -39,8 +39,7 @@ class ScannerTest(unittest.TestCase):
             shutil.rmtree(self.repo_path)
         os.mkdir(self.repo_path)
         scan_types = git.Repo.clone_from('https://github.com/DefectDojo/sample-scan-files', self.repo_path)
-        self.remove_items = ['__init__.py', '__init__.pyc', 'factory.py', 'factory.pyc',
-                        'factory.py', 'LICENSE', 'README.md', '.gitignore', '.git', '__pycache__']
+        self.remove_items = ['__init__.py', '__init__.pyc', 'LICENSE', 'README.md', '.gitignore', '.git', '__pycache__']
         tool_path = dir_path[:-5] + 'dojo/tools'
         tools = sorted(os.listdir(tool_path))
         tests = sorted(os.listdir(self.repo_path))
