@@ -21,7 +21,8 @@ logger = logging.getLogger(__name__)
 # - Path: There should be only one.Parent tag of Pathnodes
 # - Pathnode: all the calls from the source (start) to the sink (end) of the attack vector
 
-
+# TODO split original implementation into 2: base and detailed
+#      do not use mode flag to determine code flow
 class CheckmarxXMLParser(object):
     language_list = []
     mode = None
@@ -232,3 +233,8 @@ class CheckmarxXMLParser(object):
         if query.get('categories') is not None:
             categories = query.get('categories')
         return name, cwe, categories
+
+
+class DetailedCheckmarxXMLParser(CheckmarxXMLParser):
+    def __init__(self, fileobj, test):
+        super(CheckmarxXMLParser, self).__init__(fileobj, test, 'detailed')

@@ -5,8 +5,7 @@ from dojo.models import Product, Engagement, Test, Finding, \
     Product_Type, JIRA_Conf, Endpoint, BurpRawRequestResponse, JIRA_PKey, \
     Notes, DojoMeta, FindingImage
 from dojo.forms import ImportScanForm, SEVERITY_CHOICES
-from dojo.tools import requires_file
-from dojo.tools.factory import import_parser_factory
+from dojo.tools import requires_file, import_parser_factory
 from dojo.utils import create_notification
 from django.urls import reverse
 from tagging.models import Tag

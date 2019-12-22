@@ -27,8 +27,7 @@ from dojo.forms import ProductForm, EngForm, TestForm, \
     JIRA_IssueForm, ToolConfigForm, ToolProductSettingsForm, \
     ToolTypeForm, LanguagesTypeForm, Languages_TypeTypeForm, App_AnalysisTypeForm, \
     Development_EnvironmentForm, Product_TypeForm, Test_TypeForm
-from dojo.tools import requires_file
-from dojo.tools.factory import import_parser_factory
+from dojo.tools import requires_file, import_parser_factory
 from datetime import datetime
 from .object.parser import import_object_eng
 

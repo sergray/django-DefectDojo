@@ -233,3 +233,12 @@ class NessusXMLParser(object):
                                                                protocol=protocol))
 
         self.items = list(dupes.values())
+
+
+def nessus_parser_factory(fileobj, test):
+    filename = fileobj.name.lower()
+    if filename.endswith("csv"):
+        parser = NessusCSVParser(fileobj, test)
+    elif filename.endswith("xml") or filename.endswith("nessus"):
+        parser = NessusXMLParser(fileobj, test)
+    return parser

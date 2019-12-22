@@ -28,8 +28,7 @@ from dojo.models import Finding, Product, Engagement, Test, \
     Check_List, Test_Type, Notes, \
     Risk_Acceptance, Development_Environment, BurpRawRequestResponse, Endpoint, \
     JIRA_PKey, JIRA_Issue, Cred_Mapping, Dojo_User, System_Settings
-from dojo.tools import handles_active_verified_statuses
-from dojo.tools.factory import import_parser_factory
+from dojo.tools import handles_active_verified_statuses, import_parser_factory
 from dojo.utils import get_page_items, add_breadcrumb, handle_uploaded_threat, \
     FileIterWrapper, get_cal_event, message, get_system_setting, create_notification, Product_Tab
 from dojo.tasks import update_epic_task, add_epic_task
